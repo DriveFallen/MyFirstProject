@@ -7,6 +7,6 @@ public class Bullet : MonoBehaviour
     void FixedUpdate()
     {
         transform.position = transform.position + transform.forward * speed * Time.fixedDeltaTime;
-        Destroy(this, 5f);
+        Destroy(gameObject, 5f);
     }
 }
