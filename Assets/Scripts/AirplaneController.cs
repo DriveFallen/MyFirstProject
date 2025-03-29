@@ -69,7 +69,7 @@ public class AirplaneController : MonoBehaviour
         //Debug.Log("Скорость: " + speed);
     }
 
-    private void FixedUpdate()
+    private void FixedUpdate() // Вызывается 50 раз в секунду - каждые 0.02
     {
         Movement();
 
@@ -92,15 +92,15 @@ public class AirplaneController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            vertical = -1;
+            vertical = 1;
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            vertical = 1;
+            vertical = -1; // true
         }
         else
         {
-            vertical = 0;
+            vertical = 0; // false
         }
 
         if (Input.GetKey(KeyCode.A))
